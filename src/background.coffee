@@ -50,14 +50,14 @@ xhrReadyListener = ->
 
 setBadge = (badgeText) ->
     if badgeText != undefined
-        imgPath = '/img/ba_36.png'
+        imgPath = '/img/ba_38.png'
         badgeColor = [208, 0, 24, 255]
     else
-        imgPath = '/img/ba_36g.png'
+        imgPath = '/img/ba_38g.png'
         badgeColor = [190, 190, 190, 230]
         badgeText = '?'
 
-    chrome.browserAction.setIcon { path: imgPath }
+    chrome.browserAction.setIcon path: 38: imgPath
     chrome.browserAction.setBadgeBackgroundColor color: badgeColor
     chrome.browserAction.setBadgeText text: badgeText.toString()
 
