@@ -83,7 +83,7 @@ openFeedly = ->
             urls: ['*://feedly.com/v3/subscriptions*']
         , ["requestHeaders"]
 
-    chrome.tabs.query { url: '*://feedly.com/' }, (tabs) ->
+    chrome.tabs.query { url: '*://feedly.com/*' }, (tabs) ->
         if tabs[0]
             chrome.tabs.update tabs[0].id, active: true unless tabs[0].active
             chrome.tabs.reload tabs[0].id unless localStorage.getItem 'oauth'
